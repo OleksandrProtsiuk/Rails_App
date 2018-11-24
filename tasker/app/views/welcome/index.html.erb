@@ -1,0 +1,15 @@
+
+<div class="container col-sm-6 jumbotron">
+  <h1>Welcome to the App</h1>
+  <form method="GET" action="/task">
+    <div class="form-group">
+      <label>Выберите номер задачи и нажмите "GO!"</label>
+      <select class="form-control form-control-lg" name="id">
+         <% (@conditions.keys).each do  |elem| %>
+           <option><%= elem %></option>
+         <% end %>
+      </select>
+    </div>
+      <button type="submit" class="btn btn-primary btn-lg">Go!</button>
+  </form>
+</div>

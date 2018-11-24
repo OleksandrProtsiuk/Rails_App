@@ -1,0 +1,14 @@
+<form>
+  <input type="hidden" value=<%= @number %> name="id">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Введите длину окружности" name="l">
+  </div>
+  <button type="submit" class="btn btn-primary">Подсчитать</button>
+</form>
+<div>
+  <div>
+    <h4 style="color: red">Результат:</h4>
+    <% result = @task.task16(l: params[:l].to_f) %>
+    <p>Площадь круга <%= result %></p>
+  </div>
+</div>

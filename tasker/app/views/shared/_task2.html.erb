@@ -1,0 +1,17 @@
+<form>
+  <input type="hidden" value=<%= @number %> name="id">
+  <div class="form-group">
+    <input type="number" class="form-control" placeholder="введите x" name="x">
+  </div>
+  <div class="form-group">
+    <input type="number" class="form-control" placeholder="введите y" name="y">
+  </div>
+  <button type="submit" class="btn btn-primary">Подсчитать</button>
+</form>
+<div>
+  <div>
+    <h4 style="color: red">Результат:</h4>
+    <% result = @task.task2(x: params[:x].to_f, y: params[:y].to_f) %>
+    <%= result %>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<form>
+  <input type="hidden" value=<%= @number %> name="id">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Введите х" name="x">
+  </div>
+  <button type="submit" class="btn btn-primary">Подсчитать</button>
+</form>
+<div>
+  <div>
+    <h4 style="color: red">Результат:</h4>
+    <% result = @task.task28(x: params[:x].to_i) %>
+    <p>2x^4 − 3x^3 + 4x^2 − 5x + 6 = <%= result %></p>
+  </div>
+</div>

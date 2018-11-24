@@ -1,0 +1,23 @@
+<form>
+  <input type="hidden" value=<%= @number %> name="id">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Введите координату Х1" name="x1">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Введите координату Y1" name="y1">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Введите координату Х2" name="x2">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Введите координату Y2" name="y2">
+  </div>
+  <button type="submit" class="btn btn-primary">Подсчитать</button>
+</form>
+<div>
+  <div>
+    <h4 style="color: red">Результат:</h4>
+    <% result = @task.task24(x1: params[:x1].to_i, y1: params[:y1].to_i, x2: params[:x2].to_i, y2: params[:y2].to_i) %>
+    <p>Расстояние между точками <%= result %></p>
+  </div>
+</div>

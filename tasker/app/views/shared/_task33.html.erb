@@ -1,0 +1,18 @@
+<form>
+  <input type="hidden" value=<%= @number %> name="id">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Введите х" name="x">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Введите y" name="y">
+  </div>
+  <button type="submit" class="btn btn-primary">Подсчитать</button>
+</form>
+<div>
+  <div>
+    <h4 style="color: red">Результат:</h4>
+    <% result = @task.task33(x: params[:x].to_i, y: params[:y].to_i) %>
+    <p> max(x, y) = <%= result[0] %></p>
+    <p> min(x, y) = <%= result[1] %></p>
+  </div>
+</div>

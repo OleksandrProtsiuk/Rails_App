@@ -1,0 +1,20 @@
+<form>
+  <input type="hidden" value=<%= @number %> name="id">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Введите сопротивление r1" name="r1">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="введите сопротивление r2" name="r2">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="введите сопротивление r3" name="r3">
+  </div>
+  <button type="submit" class="btn btn-primary">Подсчитать</button>
+</form>
+<div>
+  <div>
+    <h4 style="color: red">Результат:</h4>
+    <% result = @task.task9(r1: params[:r1].to_f, r2: params[:r2].to_f, r3: params[:r3].to_f) %>
+    <p>Сопротивление соединения <%= result %></p>
+  </div>
+</div>

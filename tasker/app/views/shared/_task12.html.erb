@@ -1,0 +1,14 @@
+<form>
+  <input type="hidden" value=<%= @number %> name="id">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Введите длинну стороны" name="a">
+  </div>
+  <button type="submit" class="btn btn-primary">Подсчитать</button>
+</form>
+<div>
+  <div>
+    <h4 style="color: red">Результат:</h4>
+    <% result = @task.task12(a: params[:a].to_f) %>
+    <p>Площадь <%= result %></p>
+  </div>
+</div>

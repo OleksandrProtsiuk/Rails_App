@@ -1,0 +1,31 @@
+<form>
+  <input type="hidden" value=<%= @number %> name="id">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Введите координату Х1" name="x1">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Введите координату Y1" name="y1">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Введите координату Х2" name="x2">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Введите координату Y2" name="y2">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Введите координату Х3" name="x3">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Введите координату Y3" name="y3">
+  </div>
+  <button type="submit" class="btn btn-primary">Подсчитать</button>
+</form>
+<div>
+  <div>
+    <h4 style="color: red">Результат:</h4>
+    <% result = @task.task25(x1: params[:x1].to_i, y1: params[:y1].to_i, x2: params[:x2].to_i, y2: params[:y2].to_i,
+                             x3: params[:x3].to_i, y3: params[:y3].to_i) %>
+    <p>Периметр треугольника <%= result[0] %></p>
+    <p>Площадь треугольника <%= result[1] %></p>
+  </div>
+</div>

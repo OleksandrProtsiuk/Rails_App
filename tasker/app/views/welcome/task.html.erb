@@ -1,0 +1,16 @@
+
+<div class="container col-sm-6 jumbotron">
+    <h2>Задача <%= @number %> </h2>
+  <div class="container" style="background: lightslategrey">
+    <p>
+      <%= @task.conditions(number: @number.to_i) %>
+    </p>
+  </div>
+  <div>
+    <h4 style="color: red">Входные данные:</h4>
+  </div>
+  <% template = 'shared/task' + @number %>
+  <%= render template %>
+
+  <a href="/" class="btn btn-secondary">Назад</a>
+</div>

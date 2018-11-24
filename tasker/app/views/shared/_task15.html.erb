@@ -1,0 +1,18 @@
+<form>
+  <input type="hidden" value=<%= @number %> name="id">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Введите длину гипотенузы" name="hyp">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Введите длину катета" name="leg1">
+  </div>
+  <button type="submit" class="btn btn-primary">Подсчитать</button>
+</form>
+<div>
+  <div>
+    <h4 style="color: red">Результат:</h4>
+    <% result = @task.task15(hypotenuse: params[:hyp].to_f, leg1: params[:leg1].to_f) %>
+    <p>Второй катет <%= result[0] %></p>
+    <p>Радиус вписанной окружности <%= result[1] %></p>
+  </div>
+</div>

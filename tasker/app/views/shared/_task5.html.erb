@@ -1,0 +1,18 @@
+<form>
+  <input type="hidden" value=<%= @number %> name="id">
+  <div class="form-group">
+    <input type="number" class="form-control" placeholder="введите a" name="a">
+  </div>
+  <div class="form-group">
+    <input type="number" class="form-control" placeholder="введите b" name="b">
+  </div>
+  <button type="submit" class="btn btn-primary">Подсчитать</button>
+</form>
+<div>
+  <div>
+    <h4 style="color: red">Результат:</h4>
+    <% result = @task.task5(a: params[:a].to_i, b: params[:b].to_i) %>
+    <p>Среднее арифметическое <%= result[0] %></p>
+    <p>Среднее геометрическое <%= result[1] %></p>
+  </div>
+</div>
