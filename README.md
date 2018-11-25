@@ -1,8 +1,9 @@
 # README
 
 This App can help U to solve some math-tasks from one old book.
+The App is requared this gem https://rubygems.org/gems/math_tasker
 
-Visit https://taskoverdose.herokuapp.com/ to see the App in action
+# Visit https://taskoverdose.herokuapp.com/ to see the App in action.
 
 Info:
 
