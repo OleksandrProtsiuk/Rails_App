@@ -10,4 +10,6 @@ class WelcomeController < ApplicationController
     @task = Tasks::MathExercises.new
     @number = params[:id]
   end
+
+
 end

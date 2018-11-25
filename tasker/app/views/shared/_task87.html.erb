@@ -1,0 +1,17 @@
+<form>
+  <input type="hidden" value=<%= @number %> name="id">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Введите n" name="n">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Введите m" name="m">
+  </div>
+  <button type="submit" class="btn btn-primary">Подсчитать</button>
+</form>
+<div>
+  <div>
+    <h4 style="color: red">Результат:</h4>
+    <% result = @task.task87(n: params[:n].to_i, m: params[:m].to_i) %>
+    <p> сумма <%= params[:m] %> последних цифр числа <%= params[:n] %> = <%= result %> </p>
+  </div>
+</div>

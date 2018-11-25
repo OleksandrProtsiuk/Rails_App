@@ -1,0 +1,24 @@
+<form>
+  <input type="hidden" value=<%= @number %> name="id">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Введите a" name="a">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Введите b" name="b">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Введите c" name="c">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Введите d" name="d">
+  </div>
+  <button type="submit" class="btn btn-primary">Подсчитать</button>
+</form>
+<div>
+  <div>
+    <h4 style="color: red">Результат:</h4>
+    <% result = @task.task55(a: params[:a].to_f, b: params[:b].to_f,
+                             c: params[:c].to_f, d: params[:d].to_f) %>
+    <p> <%= result ? 'возможно' : 'не возможно' %> </p>
+  </div>
+</div>

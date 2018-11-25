@@ -1,17 +1,17 @@
 <form>
   <input type="hidden" value=<%= @number %> name="id">
   <div class="form-group">
-    <input type="text" class="form-control" placeholder="Введите x" name="x">
+    <input type="text" class="form-control" placeholder="Введите k" name="k">
   </div>
   <div class="form-group">
-    <input type="text" class="form-control" placeholder="Введите y" name="y">
+    <input type="text" class="form-control" placeholder="Введите l" name="l">
   </div>
   <button type="submit" class="btn btn-primary">Подсчитать</button>
 </form>
 <div>
   <div>
     <h4 style="color: red">Результат:</h4>
-    <% result = @task.task42(x: params[:x].to_i, y: params[:y].to_i) %>
-    <p> <%= result[0] %>  <%= result[1] %> </p>
+    <% result = @task.task73(k: params[:k].to_i, l: params[:l].to_i) %>
+    <p> <%= result[0] %> <%= result[1] %></p>
   </div>
 </div>
